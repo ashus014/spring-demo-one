@@ -23,7 +23,11 @@
 
     </bean>
 
-    <bean id="myCoach" class="com.luv2code.springdemo.TrackCoach">
+    <bean id="myCoach"
+          class="com.luv2code.springdemo.TrackCoach"
+          scope="prototype">
+
+        <!-- Set up constructor Injection-->
         <constructor-arg ref="myFortuneService">
 
         </constructor-arg>
